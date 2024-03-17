@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Database Records</title>
+</head>
+<body>
+<table>
+<tr><th>Document</th><th>Delete</th></tr>
+<% db.forEach((doc) => { %>
+<tr>
+    <td><%= doc%></td>
+    <td>
+        <form action="/update" method="post">
+            <input type="hidden" name="_id" value="<%= doc._id %>">
+            <button type="submit">Update</button>
+        </form>
+    </td>
+</tr>
+<%}) %>
+</table>
+</body>
+</html>

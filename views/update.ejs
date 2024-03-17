@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Insertion Form</title>
+</head>
+<body>
+    <form action="/updated" method="post">   
+        <label for="name">Employee Name:</label>
+        <input type="text" name="name" id="name" value="<%= doc.name %>">
+        <br><br><br>
+        <label for="age">Employee Age:</label>
+        <input type="number" name="age" id="age" value="<%= doc.age %>">
+        <br><br><br>
+        <label for="city">Employee City:</label>
+        <input type="text" name="city" id="city" value="<%= doc.city %>">
+        <br><br><br>
+        <label for="salary">Employee Salary:</label>
+        <input type="number" name="salary" id="salary" value="<%= doc.salary %>">
+        <br><br><br>
+        <input type="hidden" name="_id" value="<%= doc._id %>">
+        <button type="submit">Update Data</button>
+    </form>
+</body>
+</html>
